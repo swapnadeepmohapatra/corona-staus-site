@@ -38,7 +38,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Corona Realtime Status</h1>
+        <h1>COVID-19 Realtime Status</h1>
       </header>
       <div className="globalStat">
         <h2>Global Status</h2>
