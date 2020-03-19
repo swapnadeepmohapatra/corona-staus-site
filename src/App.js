@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import { getFirebase } from "./firebase";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -32,6 +33,14 @@ function App() {
       }
     );
 
+  if (loading) {
+    var timeData = `${new Date().getDate()}-${new Date().getMonth()}-${new Date().getFullYear()} = ${new Date().getHours()}:${new Date().getMinutes()}`;
+    getFirebase()
+      .database()
+      .ref()
+      .child("Analytics")
+      .push(timeData);
+  }
   if (loading) {
     return <h1 style={{ textAlign: "center" }}>Loading...</h1>;
   }
