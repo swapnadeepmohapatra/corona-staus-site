@@ -37,16 +37,16 @@ function App() {
       }
     );
 
+  // if (loading) {
+  //   var timeData = `${new Date().getDate()}-${new Date().getMonth()}-${new Date().getFullYear()} = ${new Date().getHours()}:${new Date().getMinutes()}`;
+  //   getFirebase()
+  //     .database()
+  //     .ref()
+  //     .child("Analytics")
+  //     .push(timeData);
+  // }
   if (loading) {
-    var timeData = `${new Date().getDate()}-${new Date().getMonth()}-${new Date().getFullYear()} = ${new Date().getHours()}:${new Date().getMinutes()}`;
-    getFirebase()
-      .database()
-      .ref()
-      .child("Analytics")
-      .push(timeData);
-  }
-  if (loading) {
-    return <h1 style={{ textAlign: "center" }}>Loading...</h1>;
+    return <h1 className="loading">Loading</h1>;
   }
 
   return (
@@ -165,7 +165,7 @@ function App() {
         <p>
           Date: {new Date(indiaData.lastRefreshed).getDate()}/
           {new Date(indiaData.lastRefreshed).getMonth() + 1}/
-          {new Date(indiaData.lastRefreshed).getFullYear()} Time :
+          {new Date(indiaData.lastRefreshed).getFullYear()} Time :{" "}
           {new Date(indiaData.lastRefreshed).getHours()}:
           {new Date(indiaData.lastRefreshed).getMinutes()}
         </p>
