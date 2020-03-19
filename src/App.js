@@ -163,9 +163,9 @@ function App() {
       <footer style={{ color: "#c1c1c1" }}>
         <h4>Last Updated</h4>
         <p>
-          Date: {new Date(indiaData.lastRefreshed).getUTCDay()}/
-          {new Date(indiaData.lastRefreshed).getUTCMonth()}/
-          {new Date(indiaData.lastRefreshed).getUTCFullYear()} Time :
+          Date: {new Date(indiaData.lastRefreshed).getDate()}/
+          {new Date(indiaData.lastRefreshed).getMonth() + 1}/
+          {new Date(indiaData.lastRefreshed).getFullYear()} Time :
           {new Date(indiaData.lastRefreshed).getHours()}:
           {new Date(indiaData.lastRefreshed).getMinutes()}
         </p>
