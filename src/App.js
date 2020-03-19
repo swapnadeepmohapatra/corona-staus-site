@@ -10,14 +10,14 @@ function App() {
     .then(res => res.json())
     .then(
       result => {
-        console.log(result);
+        // console.log(result);
         setData(result);
         // setLoading(false);
         fetch("https://api.rootnet.in/covid19-in/stats/latest")
           .then(res => res.json())
           .then(
             result => {
-              console.log(result);
+              // console.log(result);
               setindiaData(result);
               setLoading(false);
             },
