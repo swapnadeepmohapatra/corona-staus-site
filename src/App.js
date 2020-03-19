@@ -32,35 +32,49 @@ function App() {
     );
 
   if (loading) {
-    return <h1>Loading...</h1>;
+    return <h1 style={{ textAlign: "center" }}>Loading...</h1>;
   }
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Corna Realtime Status</h1>
+        <h1>Corona Realtime Status</h1>
       </header>
       <div className="globalStat">
         <h2>Global Status</h2>
         <table>
           <thead>
             <tr>
-              <th>Total Cases</th>
-              <th>Confirmed Cases</th>
-              <th>Recovered Cases</th>
-              <th>Deaths Cases</th>
+              <th className="head" style={{ backgroundColor: "#1abc9c" }}>
+                Total Cases
+              </th>
+              <th className="head" style={{ backgroundColor: "#EEC213" }}>
+                Confirmed Cases
+              </th>
+              <th className="head" style={{ backgroundColor: "#2ecc71" }}>
+                Recovered Cases
+              </th>
+              <th className="head" style={{ backgroundColor: "#e74c3c" }}>
+                Deaths Cases
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>
+              <td className="total" style={{ backgroundColor: "#1abc9c" }}>
                 {globalData.confirmed.value +
                   globalData.recovered.value +
                   globalData.deaths.value}
               </td>
-              <td>{globalData.confirmed.value}</td>
-              <td>{globalData.recovered.value}</td>
-              <td>{globalData.deaths.value}</td>
+              <td className="confirm" style={{ backgroundColor: "#EEC213" }}>
+                {globalData.confirmed.value}
+              </td>
+              <td className="recovered" style={{ backgroundColor: "#2ecc71" }}>
+                {globalData.recovered.value}
+              </td>
+              <td className="death" style={{ backgroundColor: "#e74c3c" }}>
+                {globalData.deaths.value}
+              </td>
             </tr>
           </tbody>
         </table>
@@ -70,20 +84,36 @@ function App() {
         <table>
           <thead>
             <tr>
-              <th>Total Cases</th>
-              <th>Indian Cases</th>
-              <th>Foreigner Cases</th>
-              <th>Death Cases</th>
-              <th>Cured Cases</th>
+              <th className="head" style={{ backgroundColor: "#1abc9c" }}>
+                Total Cases
+              </th>
+              <th className="head" style={{ backgroundColor: "#EEC213" }}>
+                Confirmed Cases
+              </th>
+              <th className="head" style={{ backgroundColor: "#2ecc71" }}>
+                Recovered Cases
+              </th>
+              <th className="head" style={{ backgroundColor: "#e74c3c" }}>
+                Deaths Cases
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>{indiaData.data.summary.total}</td>
-              <td>{indiaData.data.summary.confirmedCasesIndian}</td>
-              <td>{indiaData.data.summary.confirmedCasesForeign}</td>
-              <td>{indiaData.data.summary.deaths}</td>
-              <td>{indiaData.data.summary.discharged}</td>
+              <td className="total" style={{ backgroundColor: "#1abc9c" }}>
+                {indiaData.data.summary.total}
+              </td>
+              <td className="confirm" style={{ backgroundColor: "#EEC213" }}>
+                {indiaData.data.summary.total -
+                  indiaData.data.summary.discharged -
+                  indiaData.data.summary.deaths}
+              </td>
+              <td className="recovered" style={{ backgroundColor: "#2ecc71" }}>
+                {indiaData.data.summary.discharged}
+              </td>
+              <td className="death" style={{ backgroundColor: "#e74c3c" }}>
+                {indiaData.data.summary.deaths}
+              </td>
             </tr>
           </tbody>
         </table>
