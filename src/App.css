@@ -1,0 +1,77 @@
+.App {
+  text-align: center;
+  background-color: #343334;
+  padding-bottom: 2em;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  box-shadow: #000000 4px 4px 8px, #4d4d4d -4px -4px 8px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.globalStat {
+  color: aliceblue;
+  font-size: large;
+  display: flex;
+  text-align: center;
+  margin: auto;
+  flex-direction: column;
+  border-radius: 1em;
+  margin: 2em;
+  background-color: #444444;
+}
+
+.indStat {
+  color: aliceblue;
+  font-size: large;
+  display: flex;
+  text-align: center;
+  margin: auto;
+  flex-direction: column;
+  border-radius: 1em;
+  margin: 2em;
+  background-color: #444444;
+}
+.stateIndStat {
+  color: aliceblue;
+  font-size: large;
+  display: flex;
+  text-align: center;
+  margin: auto;
+  flex-direction: column;
+  border-radius: 1em;
+  margin-top: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
+  background-color: #444444;
+}
