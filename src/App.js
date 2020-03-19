@@ -19,6 +19,7 @@ function App() {
             result => {
               // console.log(result);
               setindiaData(result);
+
               setLoading(false);
             },
             error => {
@@ -146,6 +147,16 @@ function App() {
           </tbody>
         </table>
       </div>
+      <footer style={{ color: "#c1c1c1" }}>
+        <h4>Last Updated</h4>
+        <p>
+          Date: {new Date(indiaData.lastRefreshed).getUTCDay()}/
+          {new Date(indiaData.lastRefreshed).getUTCMonth()}/
+          {new Date(indiaData.lastRefreshed).getUTCFullYear()} Time :
+          {new Date(indiaData.lastRefreshed).getHours()}:
+          {new Date(indiaData.lastRefreshed).getMinutes()}
+        </p>
+      </footer>
     </div>
   );
 }
