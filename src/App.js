@@ -89,7 +89,7 @@ function App() {
         </table>
       </div>
       <div className="stateIndStat">
-        <h2>India Status</h2>
+        <h2>State Wise Status</h2>
         <table>
           <thead>
             <tr>
