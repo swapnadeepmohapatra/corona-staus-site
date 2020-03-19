@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import "./App.css";
 import { getFirebase } from "./firebase";
+import ReactGA from "react-ga";
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [globalData, setData] = useState();
   const [indiaData, setindiaData] = useState();
+
+  ReactGA.initialize("UA-100392729-2");
+  ReactGA.pageview("/homepage");
 
   fetch("https://covid19.mathdro.id/api")
     .then(res => res.json())
