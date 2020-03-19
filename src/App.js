@@ -82,8 +82,8 @@ function App() {
               <td>{indiaData.data.summary.total}</td>
               <td>{indiaData.data.summary.confirmedCasesIndian}</td>
               <td>{indiaData.data.summary.confirmedCasesForeign}</td>
-              <td>{indiaData.data.summary.discharged}</td>
               <td>{indiaData.data.summary.deaths}</td>
+              <td>{indiaData.data.summary.discharged}</td>
             </tr>
           </tbody>
         </table>
